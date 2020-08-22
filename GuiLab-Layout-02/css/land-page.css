@@ -1,0 +1,333 @@
+
+/* Banner Topo
+--------------*/
+
+.banner-top{
+    width: 100vw;
+    background: var(--primary-color);
+    padding: 1rem;
+}
+
+/* Configuração Cabeçalho
+*------------------------*/
+header nav li{
+    /* overflow: hidden; */
+}
+header nav li a{
+    color: var(--text-color-disabled);
+    font-weight: 600;
+    margin-left: 10px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+header nav li a:hover{
+    color: var(--text-color-light);
+}
+
+header div.navbar-collapse{
+    display: flex;
+    justify-content: center;
+}
+
+header nav li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left:0 ;
+    transition: .4s ease-in-out;
+}
+header nav li a:hover::after{
+    width: 100%;
+}
+
+.transparente{
+    background:var(--bg-menu-footer);
+}
+header nav button i{
+    color: rgba(255, 255, 255, 0.671);
+    border: 1px solid rgba(255, 255, 255, 0.582);
+    padding: 5px 10px;    
+    font-size: 32px;
+}
+
+
+/* Section HOME / Carrosel
+-------------------------------------- */
+#home .caixa-carrosel{
+    border: 12px solid white;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    box-shadow: 0px 0px 15px rgb(122, 116, 116);
+}
+.capa{
+    text-align: center;
+}
+
+section#home .carousel-caption{
+    background:var(--bg-dark-opacity);
+}
+
+
+
+/* Section Conteudo
+*****************************/
+#conteudo{
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    background: var(--bg-color-secondary);
+}
+
+
+#conteudo .caixa{
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgb(51, 48, 48);
+    /* border: 2px solid red; */
+}
+#conteudo .caixa .caixa-content{
+    /* border: 1px solid black; */
+    padding: 1.2rem 1rem;
+    background: var(--bg-color-light);
+}
+#conteudo .caixa img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+
+
+#conteudo p{
+    text-align: justify;
+    letter-spacing: .07em;
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+#conteudo h2{
+    color:var(--title-primary)
+}
+
+.btn-custom{
+    border: 1px solid rgb(42, 40, 40);
+    color: rgb(32, 30, 29);
+}
+.btn-custom:hover{
+    background: var(--text-color-hover);
+    color: var(--text-color-light);
+}
+
+
+/** rodape
+*------------------*/
+
+footer{
+    color: var(--text-color-light);
+    background: var(--bg-menu-footer);
+    padding: 2em 0;
+}
+footer p{
+    opacity: .7;
+}
+footer .brasao-ufc img{
+    width: 180px;
+}
+
+
+
+/* Media Query
+------------------------------*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    header div.navbar-collapse{
+        display: initial;
+    }
+    .banner-top div img{
+        width: 300px;
+    }
+    header .container button.navbar-toggler{
+        width: 100%;
+        color: white;
+        text-transform: uppercase;
+    }
+    header .container button.navbar-toggler i{
+        color: var(--text-color-light);
+        font-size: 1.5rem;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    header .container button.navbar-toggler:hover i{
+        color: var(--text-color-hover);
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: .8rem 0;
+    }
+    section#home .carousel-caption{
+        background: rgba(0, 0, 0, .7);
+        padding-top:0;
+   }
+    section#home .carousel-caption h4{
+        color: var(--text-color-light);
+        margin-top: 8px;
+    }
+   section#home .carousel-caption p{
+        font-size: 0.8rem;
+        text-align: left;
+        padding-left: 1.3rem;
+   } 
+
+   /* Caixas - #Conteudo*/ 
+   #conteudo .caixa{
+       width: 90%;
+       margin: .8rem auto;
+   }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+    /* Caixas - #Conteudo*/ 
+    #conteudo .caixa{
+        width: 90%;
+        margin: .8rem auto;
+    }
+
+    .banner-top div img{
+        width: 350px;
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+   section#home .carousel-caption p{
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0 1.3rem;
+   } 
+   section#home .carousel-caption{
+        font-size: 1.7rem;
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        margin-top: 10px;
+    } 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+    /* Caixas - #Conteudo*/ 
+    #conteudo .caixa{
+        width: 100%;
+    }
+    #conteudo .row-item{
+        padding: .2rem;
+    }
+
+
+
+    .banner-top div img{
+        width: 350px;
+    }
+
+    #conteudo img{
+        width: 200px;
+    }
+    #conteudo h2{
+        text-align: center;
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+    section#home .carousel-caption p{
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0 1.3rem;
+   } 
+   section#home .carousel-caption{
+        font-size: 1.7rem;
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        margin-top: 10px;
+    } 
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    
+    #conteudo .caixa-content p{
+        text-align: center;
+    }
+    #conteudo .row-item{
+        padding: .5rem;
+    }
+
+    .banner-top div img{
+        width: 450px;
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+    section#home .carousel-caption p{
+        font-size: 1.3rem;
+        
+        padding: 0 1.3rem;
+    } 
+   section#home .carousel-caption{
+       
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        font-size: 2.2rem;
+        margin-top: 10px;
+    } 
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px){
+    /* #home,body,html{
+        height: 100%;
+    } */
+    /* section .container div.carousel{
+        padding-top: 80px;
+
+    } */
+    .banner-top div img{
+        width: 450px;
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    section#home .carousel-caption p{
+        font-size: 1.3rem;
+        padding: 0 1.3rem;
+   } 
+   section#home .carousel-caption{
+    
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        font-size: 2.2rem;
+        margin-top: 10px;
+    } 
+} 

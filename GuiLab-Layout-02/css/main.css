@@ -1,0 +1,28 @@
+:root{
+    --title-primary: #133c5a;
+    --text-color-hover: rgb(74, 153, 210);
+    --text-color-light: #fff;
+    --text-color-disabled: rgba(255, 255, 255, 0.644);
+    --bg-menu-footer: #1b4b6d;
+    --primary-color:#1f567d;
+    --bg-color-secondary :rgb(245, 245, 245);
+    --bg-color-primary:#f2f2f3;
+    --bg-color-light:#fff;
+}
+
+html,body{
+    font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    box-sizing: border-box;
+}
+.actived{
+    color: var(--text-color-light);
+}
+body{
+    
+    /* background: var(--bg-color-primary); */
+    background-image: url(../imagens/bg-image.jpg);
+    background-attachment: fixed;
+    /*url(../imagens/ruido2.png),
+    linear-gradient(50deg,#d4d4d4fd,#808080);
+    background-attachment: fixed; */
+}
